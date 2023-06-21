@@ -1,0 +1,5 @@
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\CapaDatitos\bin\Debug\CapaDatitos.dll
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\CapaDatitos\bin\Debug\CapaDatitos.pdb
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\CapaDatitos\obj\Debug\CapaDatitos.csprojResolveAssemblyReference.cache
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\CapaDatitos\obj\Debug\CapaDatitos.dll
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\CapaDatitos\obj\Debug\CapaDatitos.pdb

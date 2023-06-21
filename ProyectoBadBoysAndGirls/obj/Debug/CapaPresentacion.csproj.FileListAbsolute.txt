@@ -1,0 +1,15 @@
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\ProyectoBadBoysAndGirls.exe.config
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\ProyectoBadBoysAndGirls.exe
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\ProyectoBadBoysAndGirls.pdb
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\CapaNegocito.dll
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\CapaDatitos.dll
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\CapaNegocito.pdb
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\CapaDatitos.pdb
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.Properties.Resources.resources
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.exe
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.pdb
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\Guna.UI.dll
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.index.resources
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.FromUsuarios.resources
