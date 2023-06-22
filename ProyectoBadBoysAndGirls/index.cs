@@ -19,6 +19,7 @@ namespace ProyectoBadBoysAndGirls
         public index()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,8 +41,10 @@ namespace ProyectoBadBoysAndGirls
                 MessageBox.Show("Bienvenido al sistema de Activos Fijos", "Bad Boys And Girls", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 FromEmpleados fm = new FromEmpleados();
                 FromUsuarios u = new FromUsuarios();
-                u.Show();
-                fm.ShowDialog();// muestra y no se cierra
+                FromOficina o = new FromOficina();
+                FromPartidas p = new FromPartidas();
+                p.Show();
+                //fm.ShowDialog();// muestra y no se cierra
                 this.Hide();// oculta
             }
             else {

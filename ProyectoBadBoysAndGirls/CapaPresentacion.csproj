@@ -59,6 +59,12 @@
     <Compile Include="FromEmpleados.Designer.cs">
       <DependentUpon>FromEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="FromInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromInventarios.Designer.cs">
+      <DependentUpon>FromInventarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FromOficina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FromEmpleados.resx">
       <DependentUpon>FromEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromInventarios.resx">
+      <DependentUpon>FromInventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromOficina.resx">
       <DependentUpon>FromOficina.cs</DependentUpon>

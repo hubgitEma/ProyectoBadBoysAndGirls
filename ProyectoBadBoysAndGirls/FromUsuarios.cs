@@ -35,7 +35,7 @@ namespace ProyectoBadBoysAndGirls
         {
             // tableUSUS 3
             CP_Usuarios OCP = new CP_Usuarios();
-            dgv1.DataSource = OCP.MostrarUsuario();
+            dgv.DataSource = OCP.MostrarUsuario();
         }
 
 

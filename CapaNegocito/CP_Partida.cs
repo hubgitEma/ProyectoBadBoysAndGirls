@@ -8,7 +8,7 @@ using System.Data;
 using CapaDatitos;
 namespace CapaNegocito
 {
-    class CP_Partida
+    public class CP_Partida
     {
 
         private CD_PARTIDA OCD = new CD_PARTIDA();
