@@ -48,8 +48,29 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\Librerias\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FromEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromEmpleados.Designer.cs">
+      <DependentUpon>FromEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromOficina.Designer.cs">
+      <DependentUpon>FromOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromPartidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromPartidas.Designer.cs">
+      <DependentUpon>FromPartidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +85,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FromEmpleados.resx">
+      <DependentUpon>FromEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromOficina.resx">
+      <DependentUpon>FromOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromPartidas.resx">
+      <DependentUpon>FromPartidas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="index.resx">
       <DependentUpon>index.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +143,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\boton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobresalir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palabra.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

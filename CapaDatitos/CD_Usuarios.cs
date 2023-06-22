@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+// prurba
+using System.Collections;
 
 namespace CapaDatitos
 {
@@ -24,6 +26,38 @@ namespace CapaDatitos
             tabla.Load(leer);
             conn.CerrarConexion();
             return tabla;
+        }
+
+        public ArrayList MostrarComboBoxUsuario()
+        {
+            //transac sql
+            ArrayList cb = new ArrayList();
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM USUARIOS";
+            leer = comando.ExecuteReader();
+            while (leer.Read())
+            {
+                cb.Add(leer["USUARIO_NO"] +"|  "+leer["CI"] + "-." + leer["NOMBRE"] + " " + leer["PATERNO"] + " " + leer["MATERNO"]);
+             
+            }           
+            conn.CerrarConexion();
+            return cb;
+        }
+
+        public string RecuperaComboBoxUsuario(string id)
+        {
+            //transac sql
+            string cb="";
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM USUARIOS WHERE USUARIO_NO='"+id+"'";
+            leer = comando.ExecuteReader();
+            if (leer.Read())
+            {
+                cb = leer["USUARIO_NO"] + "|  " + leer["CI"] + "-." + leer["NOMBRE"] + " " + leer["PATERNO"] + " " + leer["MATERNO"];
+
+            }
+            conn.CerrarConexion();
+            return cb;
         }
 
         public DataTable MostrarDesc()

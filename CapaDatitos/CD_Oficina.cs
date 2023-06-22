@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
 
 namespace CapaDatitos
 {
@@ -26,6 +27,36 @@ namespace CapaDatitos
             return tabla;
         }
 
+        public ArrayList MostrarComboBoxOficina()
+        {
+            //transac sql
+            ArrayList cb = new ArrayList();
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM OFICINA";
+            leer = comando.ExecuteReader();
+            while (leer.Read())
+            {
+                cb.Add(leer["OFICINA_NO"] +"|  "+leer["COD_OFICINA"] + " " + leer["DEPTO"] + " " + leer["NOMBRE_OF"] );
+
+            }
+            conn.CerrarConexion();
+            return cb;
+        }
+        public string RecuperaComboBoxOficina(string ID)
+        {
+            //transac sql
+            string cboo="";
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM OFICINA WHERE OFICINA_NO='"+ID+"' ";
+            leer = comando.ExecuteReader();
+            if (leer.Read())
+            {
+                cboo = leer["OFICINA_NO"] + "|  " + leer["COD_OFICINA"] + " " + leer["DEPTO"] + " " + leer["NOMBRE_OF"];
+
+            }
+            conn.CerrarConexion();
+            return cboo;
+        }
         public DataTable MostrarDesc()
         {
             //transac sql

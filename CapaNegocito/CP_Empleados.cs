@@ -9,7 +9,7 @@ using CapaDatitos;
 
 namespace CapaNegocito
 {
-    class CP_Empleados
+   public class CP_Empleados
     {
         private CD_Empledos OCD = new CD_Empledos();
         // tableUSUS 2

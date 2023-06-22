@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 using CapaDatitos;
 // agregamos la capa datitos 
+using System.Collections;
 namespace CapaNegocito
 {
     //clase tipo publica
@@ -59,5 +60,18 @@ namespace CapaNegocito
             tabla = OCD.Busqueda(ci,nom,pat,mat,usu);
             return tabla;
         }
+
+        public ArrayList CbUsuario()
+        {
+            ArrayList lis= OCD.MostrarComboBoxUsuario();
+            return lis;
+        }
+
+        public string  RUF(string id)
+        {
+            string lis = OCD.RecuperaComboBoxUsuario(id);
+            return lis;
+        }
+        
     }
 }

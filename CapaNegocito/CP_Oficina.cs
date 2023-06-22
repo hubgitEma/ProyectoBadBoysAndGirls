@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using CapaDatitos;
+using System.Collections;
 
 namespace CapaNegocito
 {
-    class CP_Oficina
+    public class CP_Oficina
     {
         private CD_Oficina OCD = new CD_Oficina();
         // tableUSUS 2
@@ -56,6 +57,18 @@ namespace CapaNegocito
             DataTable tabla = new DataTable();
             tabla = OCD.Busqueda(dep, codOf, nomOf, resp, ubi);
             return tabla;
+        }
+
+        public ArrayList CbOficina()
+        {
+            ArrayList lis = OCD.MostrarComboBoxOficina();
+            return lis;
+        }
+
+        public string ROF(string id)
+        {
+            string lis = OCD.RecuperaComboBoxOficina(id);
+            return lis;
         }
     }
 }

@@ -13,3 +13,7 @@ D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoys
 D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\Guna.UI.dll
 D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.index.resources
 D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.FromUsuarios.resources
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.FromEmpleados.resources
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.FromOficina.resources
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.FromPartidas.resources
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\bin\Debug\zxing.dll

@@ -87,7 +87,7 @@ namespace CapaDatitos
         {
             // PARA EL PROCEDIMIENTO
             comando.Connection = conn.AbrirConexion();
-            comando.CommandText = "UPDATE_USUARIO";
+            comando.CommandText = "UPDATE_EMPLEADOS";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@CI", CI);
             comando.Parameters.AddWithValue("@EXP", EXP);
@@ -110,8 +110,8 @@ namespace CapaDatitos
             comando.Connection = conn.AbrirConexion();
             comando.CommandText = "DELETE FROM EMPLEADOS WHERE EMP_NO='" + id + "'";
             comando.CommandType = CommandType.Text;
-            comando.ExecuteNonQuery();
+            comando.ExecuteNonQuery();            
         }
-               
+        
     }
 }

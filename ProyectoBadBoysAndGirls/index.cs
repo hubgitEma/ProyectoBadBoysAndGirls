@@ -38,8 +38,10 @@ namespace ProyectoBadBoysAndGirls
             if (log.VerificaLoggin(txtUsuario.Text, txtContraseña.Text))
             {
                 MessageBox.Show("Bienvenido al sistema de Activos Fijos", "Bad Boys And Girls", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                FromUsuarios fm = new FromUsuarios();
-                fm.ShowDialog();// muestra y no se cierra                   
+                FromEmpleados fm = new FromEmpleados();
+                FromUsuarios u = new FromUsuarios();
+                u.Show();
+                fm.ShowDialog();// muestra y no se cierra
                 this.Hide();// oculta
             }
             else {
