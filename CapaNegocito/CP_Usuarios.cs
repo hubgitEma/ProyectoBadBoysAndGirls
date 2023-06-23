@@ -23,15 +23,15 @@ namespace CapaNegocito
         }
 
         // DE TIPO STRING TODO POR LO COMBOBOXS
-        public void InsertarUsuario(string USUARIO_NO, string CI, string NOMBRE, string PATERNO, string MATERNO, string CARGO, string PROFESION, string USUARIO, string PASSWORD) {
-            OCD.Insertar(USUARIO_NO, CI, NOMBRE, PATERNO, MATERNO, CARGO, PROFESION, USUARIO, PASSWORD);
+        public void InsertarUsuario( string CI, string NOMBRE, string PATERNO, string MATERNO, string CARGO, string PROFESION, string USUARIO, string PASSWORD) {
+            OCD.InsertarP(CI, NOMBRE, PATERNO, MATERNO, CARGO, PROFESION, USUARIO, PASSWORD);
         }
 
-        public void EditarUsuario(string USUARIO_NO, string CI, string NOMBRE, string PATERNO, string MATERNO, string CARGO, string PROFESION, string USUARIO, string PASSWORD)
+        public void EditarUsuario( string CI, string NOMBRE, string PATERNO, string MATERNO, string CARGO, string PROFESION, string USUARIO, string PASSWORD, string USUARIO_NO)
         {
-            OCD.EditarP(USUARIO_NO, CI, NOMBRE, PATERNO, MATERNO, CARGO, PROFESION, USUARIO, PASSWORD);
+            OCD.EditarP( CI, NOMBRE, PATERNO, MATERNO, CARGO, PROFESION, USUARIO, PASSWORD, USUARIO_NO);
         }
-
+        
         public void EliminarUsuario(string id) {
             OCD.Eliminar(id);
         }

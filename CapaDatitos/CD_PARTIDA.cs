@@ -64,7 +64,7 @@ namespace CapaDatitos
         }
 
 
-        public void InsertarP(string nom, int part, double vu, double cof, string depre, string act, string usu)
+        public void InsertarP(string nom, int part, float vu, float cof, string depre, string act, string usu)
         {
             // PARA EL PROCEDIMIENTO
             comando.Connection = conn.AbrirConexion();
@@ -74,8 +74,8 @@ namespace CapaDatitos
             comando.Parameters.AddWithValue("@PARTIDA", part);
             comando.Parameters.AddWithValue("@VIDA_UTIL", vu);
             comando.Parameters.AddWithValue("@COEFICIENTE", cof);
-            comando.Parameters.AddWithValue("@DEPRESIACION", depre);
-            comando.Parameters.AddWithValue("@ACTUALIZACION", act);
+            comando.Parameters.AddWithValue("@DEPRESACION", depre);
+            comando.Parameters.AddWithValue("@ACTUALIZA", act);
             comando.Parameters.AddWithValue("@USUARIO", usu);        
             // Y ASI SUCESIVAMENTE
             comando.ExecuteNonQuery();
@@ -93,8 +93,8 @@ namespace CapaDatitos
             comando.Parameters.AddWithValue("@PARTIDA", part);
             comando.Parameters.AddWithValue("@VIDA_UTIL", vu);
             comando.Parameters.AddWithValue("@COEFICIENTE", cof);
-            comando.Parameters.AddWithValue("@DEPRESIACION", depre);
-            comando.Parameters.AddWithValue("@ACTUALIZACION", act);
+            comando.Parameters.AddWithValue("@@DEPRESACION", depre);
+            comando.Parameters.AddWithValue("@ACTUALIZA", act);
             comando.Parameters.AddWithValue("@USUARIO", usu);
             comando.Parameters.AddWithValue("@id", id);
             comando.ExecuteNonQuery();

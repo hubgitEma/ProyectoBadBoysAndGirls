@@ -23,7 +23,7 @@ namespace CapaNegocito
         // DE TIPO STRING TODO POR LO COMBOBOXS
         public void Insertar(string nom, string part, string vu, string cof, string depre, string act, string usu)
         {
-            OCD.InsertarP(nom, Convert.ToInt32(part), Convert.ToDouble(vu), Convert.ToDouble(cof), depre, act,  usu);
+            OCD.InsertarP(nom, Convert.ToInt32(part), float.Parse(vu), float.Parse(cof), depre, act,  usu);
         }
 
         public void Editar(string nom, string part, string vu, string cof, string depre, string act, string usu, string id)

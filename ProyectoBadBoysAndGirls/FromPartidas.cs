@@ -27,7 +27,7 @@ namespace ProyectoBadBoysAndGirls
             txtId.Hide();
             BloqueBotones(true, false, true, true);
             BloqueoTextBox(false);
-            txtNombre.Focus();            
+            txtNombre.Focus();           
         }
 
         private void MostrarGral()
@@ -37,6 +37,13 @@ namespace ProyectoBadBoysAndGirls
             dgv.DataSource = OCPG.Mostrar();           
         }
 
+        void usuario() {
+            CP_Usuarios cbusu = new CP_Usuarios();
+            foreach (var item in cbusu.CbUsuario())
+            {
+                CbUsu.Items.Add(item);
+            }
+        }
         public void GeneraQR()
         {
             string txt = txtNombre.Text + " " + txtPartida.Text + " " + txtVidautil.Text;
@@ -93,6 +100,7 @@ namespace ProyectoBadBoysAndGirls
             Editar = false;
             BloqueoTextBox(true);
             limpia();
+            usuario();
             BloqueBotones(false, true, false, false);
             btnSalir.Text = "Cancelar";            
             pbGuardar.Image = System.Drawing.Image.FromFile("D:\\UPEA\\8-1-2023\\soft\\PROYECTO_GRUPAL\\C#\\ProyectoBadBoysAndGirls\\ProyectoBadBoysAndGirls\\Resources\\carita1.jpeg");
@@ -157,11 +165,12 @@ namespace ProyectoBadBoysAndGirls
                 }
             }
             BloqueoTextBox(false);
-            BloqueBotones(true, false, true, true);
+            BloqueBotones(true, false, true, true);            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
-        {            
+        {
+            usuario();
             if (dgv.SelectedRows.Count > 0)
             {
                 Editar = true;
@@ -185,7 +194,9 @@ namespace ProyectoBadBoysAndGirls
                 {
                     chf2.Checked = true;
                 }
-                CbUsu.SelectedItem = dgv.CurrentRow.Cells["USUARIO"].Value.ToString();
+                string ida= dgv.CurrentRow.Cells["USUARIO"].Value.ToString();
+                CP_Usuarios cbusu = new CP_Usuarios();                
+                CbUsu.SelectedItem = cbusu.RUF(ida);
                 txtId.Text = dgv.CurrentRow.Cells["PARTIDA_NO"].Value.ToString();
             }
             else
@@ -195,7 +206,7 @@ namespace ProyectoBadBoysAndGirls
             BloqueoTextBox(true);
             BloqueBotones(false, true, false, false);
             btnSalir.Text = "Cancelar";
-            dgv.Enabled = false;
+            dgv.Enabled = false;            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -226,6 +237,7 @@ namespace ProyectoBadBoysAndGirls
                 BloqueoTextBox(false);
                 btnSalir.Text = "Salir";
                 limpia();
+                usuario();
                 dgv.Enabled = true;
                 pbGuardar.Image = System.Drawing.Image.FromFile("D:\\UPEA\\8-1-2023\\soft\\PROYECTO_GRUPAL\\C#\\ProyectoBadBoysAndGirls\\ProyectoBadBoysAndGirls\\Resources\\carita1.jpeg");
             }
@@ -317,6 +329,22 @@ namespace ProyectoBadBoysAndGirls
                 // retorna el valor en el parametro
                 return;
             }
+        }
+
+        private void txtBuscaroficinas_TextChanged(object sender, EventArgs e)
+        {
+            dgv.DataSource = null;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {            
+            dgv.DataSource = OCPG.Busqueda(txtBusca.Text, "", "", "", "");
+            
+        }
+
+        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            //dgv.DataSource = null;
         }
     }
 }

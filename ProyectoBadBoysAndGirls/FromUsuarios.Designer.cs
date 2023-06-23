@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.WinForms.GunaComboBox cbCargo;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromUsuarios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromUsuarios));
             this.GunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,13 +47,13 @@
             this.pbPdf = new Guna.UI.WinForms.GunaPictureBox();
             this.pbExcel = new Guna.UI.WinForms.GunaPictureBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbGuardar = new System.Windows.Forms.PictureBox();
             this.btnModificar = new Guna.UI.WinForms.GunaButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtContraseña = new Guna.UI.WinForms.GunaTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUsuario = new Guna.UI.WinForms.GunaTextBox();
-            this.TxtProfesion = new Guna.UI.WinForms.GunaTextBox();
+            this.txtProfesion = new Guna.UI.WinForms.GunaTextBox();
             this.btnGuardar = new Guna.UI.WinForms.GunaButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -63,23 +62,18 @@
             this.txtxMaterno = new Guna.UI.WinForms.GunaTextBox();
             this.txtPaterno = new Guna.UI.WinForms.GunaTextBox();
             this.txtNombre = new Guna.UI.WinForms.GunaTextBox();
-            this.txtCi = new Guna.UI.WinForms.GunaTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevo = new Guna.UI.WinForms.GunaButton();
-            cbCargo = new Guna.UI.WinForms.GunaComboBox();
+            this.txtCi = new Guna.UI.WinForms.GunaTextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtCargo = new Guna.UI.WinForms.GunaTextBox();
+            this.btnEli = new Guna.UI.WinForms.GunaButton();
+            this.btnListar = new Guna.UI.WinForms.GunaButton();
+            this.btnSalir = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).BeginInit();
@@ -89,34 +83,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPdf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExcel)).BeginInit();
             this.GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbCargo
-            // 
-            cbCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            cbCargo.BackColor = System.Drawing.Color.Transparent;
-            cbCargo.BaseColor = System.Drawing.Color.White;
-            cbCargo.BorderColor = System.Drawing.Color.Silver;
-            cbCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbCargo.FocusedColor = System.Drawing.Color.Empty;
-            cbCargo.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cbCargo.ForeColor = System.Drawing.Color.Black;
-            cbCargo.FormattingEnabled = true;
-            cbCargo.Location = new System.Drawing.Point(35, 495);
-            cbCargo.Name = "cbCargo";
-            cbCargo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            cbCargo.OnHoverItemForeColor = System.Drawing.Color.RosyBrown;
-            cbCargo.Radius = 4;
-            cbCargo.Size = new System.Drawing.Size(429, 24);
-            cbCargo.TabIndex = 178;
             // 
             // GunaElipse1
             // 
@@ -256,7 +228,7 @@
             // 
             // GroupBox1
             // 
-            this.GroupBox1.Controls.Add(this.pictureBox2);
+            this.GroupBox1.Controls.Add(this.pbGuardar);
             this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GroupBox1.Location = new System.Drawing.Point(342, 14);
@@ -268,14 +240,14 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "QR";
             // 
-            // pictureBox2
+            // pbGuardar
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(147, 113);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pbGuardar.BackColor = System.Drawing.Color.White;
+            this.pbGuardar.Location = new System.Drawing.Point(6, 25);
+            this.pbGuardar.Name = "pbGuardar";
+            this.pbGuardar.Size = new System.Drawing.Size(147, 113);
+            this.pbGuardar.TabIndex = 0;
+            this.pbGuardar.TabStop = false;
             // 
             // btnModificar
             // 
@@ -304,6 +276,7 @@
             this.btnModificar.TabIndex = 227;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label1
             // 
@@ -366,23 +339,23 @@
             this.txtUsuario.TabIndex = 187;
             this.txtUsuario.TextOffsetX = 4;
             // 
-            // TxtProfesion
+            // txtProfesion
             // 
-            this.TxtProfesion.BackColor = System.Drawing.Color.Transparent;
-            this.TxtProfesion.BaseColor = System.Drawing.Color.White;
-            this.TxtProfesion.BorderColor = System.Drawing.Color.Silver;
-            this.TxtProfesion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtProfesion.FocusedBaseColor = System.Drawing.Color.White;
-            this.TxtProfesion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.TxtProfesion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.TxtProfesion.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtProfesion.Location = new System.Drawing.Point(35, 415);
-            this.TxtProfesion.Name = "TxtProfesion";
-            this.TxtProfesion.PasswordChar = '\0';
-            this.TxtProfesion.Radius = 5;
-            this.TxtProfesion.Size = new System.Drawing.Size(191, 38);
-            this.TxtProfesion.TabIndex = 185;
-            this.TxtProfesion.TextOffsetX = 4;
+            this.txtProfesion.BackColor = System.Drawing.Color.Transparent;
+            this.txtProfesion.BaseColor = System.Drawing.Color.White;
+            this.txtProfesion.BorderColor = System.Drawing.Color.Silver;
+            this.txtProfesion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProfesion.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtProfesion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtProfesion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtProfesion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtProfesion.Location = new System.Drawing.Point(35, 415);
+            this.txtProfesion.Name = "txtProfesion";
+            this.txtProfesion.PasswordChar = '\0';
+            this.txtProfesion.Radius = 5;
+            this.txtProfesion.Size = new System.Drawing.Size(191, 38);
+            this.txtProfesion.TabIndex = 185;
+            this.txtProfesion.TextOffsetX = 4;
             // 
             // btnGuardar
             // 
@@ -411,6 +384,7 @@
             this.btnGuardar.TabIndex = 226;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // pictureBox1
             // 
@@ -453,6 +427,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.panel1.Controls.Add(this.txtCargo);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.limpiar);
             this.panel1.Controls.Add(this.GroupBox1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -461,21 +437,20 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.TxtProfesion);
+            this.panel1.Controls.Add(this.txtProfesion);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtxMaterno);
             this.panel1.Controls.Add(this.txtPaterno);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.txtCi);
-            this.panel1.Controls.Add(cbCargo);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(517, 536);
+            this.panel1.Size = new System.Drawing.Size(517, 565);
             this.panel1.TabIndex = 224;
             // 
             // txtxMaterno
@@ -532,24 +507,6 @@
             this.txtNombre.TabIndex = 180;
             this.txtNombre.TextOffsetX = 4;
             // 
-            // txtCi
-            // 
-            this.txtCi.BackColor = System.Drawing.Color.Transparent;
-            this.txtCi.BaseColor = System.Drawing.Color.White;
-            this.txtCi.BorderColor = System.Drawing.Color.Silver;
-            this.txtCi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCi.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtCi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtCi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCi.Location = new System.Drawing.Point(28, 171);
-            this.txtCi.Name = "txtCi";
-            this.txtCi.PasswordChar = '\0';
-            this.txtCi.Radius = 5;
-            this.txtCi.Size = new System.Drawing.Size(191, 38);
-            this.txtCi.TabIndex = 179;
-            this.txtCi.TextOffsetX = 4;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -602,12 +559,6 @@
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label9.UseMnemonic = false;
             // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "USUARIO";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 98;
-            // 
             // dgv
             // 
             this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -629,19 +580,9 @@
             this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeight = 30;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9});
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgv.Location = new System.Drawing.Point(523, 230);
+            this.dgv.Location = new System.Drawing.Point(523, 298);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -660,56 +601,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(428, 321);
+            this.dgv.Size = new System.Drawing.Size(428, 253);
             this.dgv.TabIndex = 228;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "USUARIO";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 98;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "CI";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 47;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "NOMBRE";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 93;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "PATERNO";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 99;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "MATERNO";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 102;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CARGO";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 80;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "PROFESION";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 113;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "PASSWORD";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 108;
             // 
             // btnNuevo
             // 
@@ -738,12 +631,146 @@
             this.btnNuevo.TabIndex = 225;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // txtCi
+            // 
+            this.txtCi.BackColor = System.Drawing.Color.Transparent;
+            this.txtCi.BaseColor = System.Drawing.Color.White;
+            this.txtCi.BorderColor = System.Drawing.Color.Silver;
+            this.txtCi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCi.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtCi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtCi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCi.Location = new System.Drawing.Point(28, 171);
+            this.txtCi.Name = "txtCi";
+            this.txtCi.PasswordChar = '\0';
+            this.txtCi.Radius = 5;
+            this.txtCi.Size = new System.Drawing.Size(191, 38);
+            this.txtCi.TabIndex = 179;
+            this.txtCi.TextOffsetX = 4;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(37, 123);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 195;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.BackColor = System.Drawing.Color.Transparent;
+            this.txtCargo.BaseColor = System.Drawing.Color.White;
+            this.txtCargo.BorderColor = System.Drawing.Color.Silver;
+            this.txtCargo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCargo.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtCargo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtCargo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCargo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCargo.Location = new System.Drawing.Point(35, 498);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.PasswordChar = '\0';
+            this.txtCargo.Radius = 5;
+            this.txtCargo.Size = new System.Drawing.Size(316, 38);
+            this.txtCargo.TabIndex = 196;
+            this.txtCargo.TextOffsetX = 4;
+            // 
+            // btnEli
+            // 
+            this.btnEli.AllowDrop = true;
+            this.btnEli.AnimationHoverSpeed = 0.07F;
+            this.btnEli.AnimationSpeed = 0.03F;
+            this.btnEli.BackColor = System.Drawing.Color.Transparent;
+            this.btnEli.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnEli.BorderColor = System.Drawing.Color.Black;
+            this.btnEli.BorderSize = 3;
+            this.btnEli.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEli.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEli.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEli.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnEli.Image = ((System.Drawing.Image)(resources.GetObject("btnEli.Image")));
+            this.btnEli.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEli.Location = new System.Drawing.Point(735, 176);
+            this.btnEli.Name = "btnEli";
+            this.btnEli.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnEli.OnHoverBorderColor = System.Drawing.Color.Aqua;
+            this.btnEli.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEli.OnHoverImage = null;
+            this.btnEli.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEli.Radius = 5;
+            this.btnEli.Size = new System.Drawing.Size(196, 48);
+            this.btnEli.TabIndex = 229;
+            this.btnEli.Text = "Eliminar";
+            this.btnEli.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEli.Click += new System.EventHandler(this.btnEli_Click);
+            // 
+            // btnListar
+            // 
+            this.btnListar.AllowDrop = true;
+            this.btnListar.AnimationHoverSpeed = 0.07F;
+            this.btnListar.AnimationSpeed = 0.03F;
+            this.btnListar.BackColor = System.Drawing.Color.Transparent;
+            this.btnListar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnListar.BorderColor = System.Drawing.Color.Black;
+            this.btnListar.BorderSize = 3;
+            this.btnListar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnListar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
+            this.btnListar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnListar.Location = new System.Drawing.Point(735, 230);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnListar.OnHoverBorderColor = System.Drawing.Color.Aqua;
+            this.btnListar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnListar.OnHoverImage = null;
+            this.btnListar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnListar.Radius = 5;
+            this.btnListar.Size = new System.Drawing.Size(196, 48);
+            this.btnListar.TabIndex = 231;
+            this.btnListar.Text = "Listar Ascendente";
+            this.btnListar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowDrop = true;
+            this.btnSalir.AnimationHoverSpeed = 0.07F;
+            this.btnSalir.AnimationSpeed = 0.03F;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnSalir.BorderColor = System.Drawing.Color.Black;
+            this.btnSalir.BorderSize = 3;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSalir.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSalir.Location = new System.Drawing.Point(526, 230);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnSalir.OnHoverBorderColor = System.Drawing.Color.Aqua;
+            this.btnSalir.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSalir.OnHoverImage = null;
+            this.btnSalir.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSalir.Radius = 5;
+            this.btnSalir.Size = new System.Drawing.Size(196, 48);
+            this.btnSalir.TabIndex = 230;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FromUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 563);
+            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnEli);
             this.Controls.Add(this.txtBuscarusuarios);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gunaPanel2);
@@ -767,7 +794,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPdf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExcel)).EndInit();
             this.GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -796,34 +823,30 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox limpiar;
         internal System.Windows.Forms.GroupBox GroupBox1;
-        internal System.Windows.Forms.PictureBox pictureBox2;
+        internal System.Windows.Forms.PictureBox pbGuardar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaTextBox txtContraseña;
         private System.Windows.Forms.Label label8;
         private Guna.UI.WinForms.GunaTextBox txtUsuario;
         private System.Windows.Forms.Label label7;
-        private Guna.UI.WinForms.GunaTextBox TxtProfesion;
+        private Guna.UI.WinForms.GunaTextBox txtProfesion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaTextBox txtxMaterno;
         private Guna.UI.WinForms.GunaTextBox txtPaterno;
         private Guna.UI.WinForms.GunaTextBox txtNombre;
-        private Guna.UI.WinForms.GunaTextBox txtCi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private Guna.UI.WinForms.GunaButton btnNuevo;
+        private Guna.UI.WinForms.GunaTextBox txtCargo;
+        private System.Windows.Forms.TextBox txtId;
+        private Guna.UI.WinForms.GunaTextBox txtCi;
+        private Guna.UI.WinForms.GunaButton btnListar;
+        private Guna.UI.WinForms.GunaButton btnSalir;
+        private Guna.UI.WinForms.GunaButton btnEli;
     }
 }

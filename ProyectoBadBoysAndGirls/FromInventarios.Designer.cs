@@ -29,26 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromInventarios));
             this.txtBuscaroficinas = new System.Windows.Forms.TextBox();
             this.pbWord = new Guna.UI.WinForms.GunaPictureBox();
-            this.dtginventario = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.txtEspecifica = new Guna.UI.WinForms.GunaTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPartida = new System.Windows.Forms.TextBox();
@@ -56,7 +43,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbGuardar = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
@@ -72,13 +59,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fecha = new System.Windows.Forms.Label();
             this.hora = new System.Windows.Forms.Label();
-            this.txtEmpNo = new System.Windows.Forms.TextBox();
+            this.txtbus = new System.Windows.Forms.TextBox();
             this.PictureBox11 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtEstado = new Guna.UI.WinForms.GunaTextBox();
             this.pbPdf = new Guna.UI.WinForms.GunaPictureBox();
             this.dtpFechadeIngreso = new System.Windows.Forms.DateTimePicker();
-            this.gcbProcedencia = new Guna.UI.WinForms.GunaComboBox();
+            this.txtEmpNo = new Guna.UI.WinForms.GunaComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gbQR = new System.Windows.Forms.GroupBox();
@@ -100,10 +87,14 @@
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.horayfecha = new System.Windows.Forms.Timer(this.components);
             this.txtAuxiliar = new Guna.UI.WinForms.GunaTextBox();
+            this.btnListar = new Guna.UI.WinForms.GunaButton();
+            this.btnSalir = new Guna.UI.WinForms.GunaButton();
+            this.txtProcedencia = new Guna.UI.WinForms.GunaTextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbWord)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtginventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
@@ -140,142 +131,50 @@
             this.pbWord.TabIndex = 2;
             this.pbWord.TabStop = false;
             // 
-            // dtginventario
+            // dgv
             // 
-            this.dtginventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtginventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtginventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtginventario.BackgroundColor = System.Drawing.Color.White;
-            this.dtginventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtginventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtginventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtginventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtginventario.ColumnHeadersHeight = 30;
-            this.dtginventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtginventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13});
-            this.dtginventario.EnableHeadersVisualStyles = false;
-            this.dtginventario.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtginventario.Location = new System.Drawing.Point(757, 237);
-            this.dtginventario.Name = "dtginventario";
-            this.dtginventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtginventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtginventario.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dtginventario.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtginventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtginventario.Size = new System.Drawing.Size(498, 310);
-            this.dtginventario.TabIndex = 301;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "INV";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 58;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "AUXILIAR";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 103;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "PARTIDA";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 97;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "CODIGOE";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 97;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "CODIGOA";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 99;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "SERIE";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 71;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "DESCRIPCION";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 130;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "ESTADO";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 87;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "ESPECIFICA";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 113;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "EMPLEADOS";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 115;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "PROCEDENCIA";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 134;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "FECHA_INGRESO";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 147;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "OBSERVACION";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 134;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv.ColumnHeadersHeight = 30;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv.EnableHeadersVisualStyles = false;
+            this.dgv.GridColor = System.Drawing.Color.SteelBlue;
+            this.dgv.Location = new System.Drawing.Point(757, 292);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv.RowHeadersVisible = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(589, 255);
+            this.dgv.TabIndex = 301;
             // 
             // txtEspecifica
             // 
@@ -356,15 +255,15 @@
             this.label14.TabIndex = 304;
             this.label14.Text = "BUSQUEDA POR NOMBRE";
             // 
-            // pictureBox4
+            // pbGuardar
             // 
-            this.pictureBox4.Image = global::ProyectoBadBoysAndGirls.Properties.Resources.carita1;
-            this.pictureBox4.Location = new System.Drawing.Point(652, 55);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(177, 150);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 265;
-            this.pictureBox4.TabStop = false;
+            this.pbGuardar.Image = global::ProyectoBadBoysAndGirls.Properties.Resources.carita1;
+            this.pbGuardar.Location = new System.Drawing.Point(652, 55);
+            this.pbGuardar.Name = "pbGuardar";
+            this.pbGuardar.Size = new System.Drawing.Size(177, 150);
+            this.pbGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGuardar.TabIndex = 265;
+            this.pbGuardar.TabStop = false;
             // 
             // groupBox2
             // 
@@ -435,6 +334,7 @@
             this.btnEliminar.TabIndex = 298;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -463,6 +363,7 @@
             this.btnModificar.TabIndex = 297;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -491,6 +392,7 @@
             this.btnGuardar.TabIndex = 296;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
@@ -519,13 +421,14 @@
             this.btnNuevo.TabIndex = 295;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(444, 208);
+            this.pictureBox6.Location = new System.Drawing.Point(784, 230);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(27, 26);
             this.pictureBox6.TabIndex = 286;
@@ -598,13 +501,13 @@
             this.hora.TabIndex = 209;
             this.hora.Text = "label5";
             // 
-            // txtEmpNo
+            // txtbus
             // 
-            this.txtEmpNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpNo.Location = new System.Drawing.Point(444, 208);
-            this.txtEmpNo.Name = "txtEmpNo";
-            this.txtEmpNo.Size = new System.Drawing.Size(191, 29);
-            this.txtEmpNo.TabIndex = 287;
+            this.txtbus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbus.Location = new System.Drawing.Point(671, 265);
+            this.txtbus.Name = "txtbus";
+            this.txtbus.Size = new System.Drawing.Size(191, 29);
+            this.txtbus.TabIndex = 287;
             // 
             // PictureBox11
             // 
@@ -665,23 +568,23 @@
             this.dtpFechadeIngreso.Size = new System.Drawing.Size(200, 20);
             this.dtpFechadeIngreso.TabIndex = 284;
             // 
-            // gcbProcedencia
+            // txtEmpNo
             // 
-            this.gcbProcedencia.BackColor = System.Drawing.Color.Transparent;
-            this.gcbProcedencia.BaseColor = System.Drawing.Color.White;
-            this.gcbProcedencia.BorderColor = System.Drawing.Color.Silver;
-            this.gcbProcedencia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gcbProcedencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gcbProcedencia.FocusedColor = System.Drawing.Color.Empty;
-            this.gcbProcedencia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gcbProcedencia.ForeColor = System.Drawing.Color.Black;
-            this.gcbProcedencia.FormattingEnabled = true;
-            this.gcbProcedencia.Location = new System.Drawing.Point(444, 286);
-            this.gcbProcedencia.Name = "gcbProcedencia";
-            this.gcbProcedencia.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gcbProcedencia.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gcbProcedencia.Size = new System.Drawing.Size(191, 26);
-            this.gcbProcedencia.TabIndex = 280;
+            this.txtEmpNo.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmpNo.BaseColor = System.Drawing.Color.White;
+            this.txtEmpNo.BorderColor = System.Drawing.Color.Silver;
+            this.txtEmpNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtEmpNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtEmpNo.FocusedColor = System.Drawing.Color.Empty;
+            this.txtEmpNo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtEmpNo.ForeColor = System.Drawing.Color.Black;
+            this.txtEmpNo.FormattingEnabled = true;
+            this.txtEmpNo.Location = new System.Drawing.Point(441, 214);
+            this.txtEmpNo.Name = "txtEmpNo";
+            this.txtEmpNo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtEmpNo.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.txtEmpNo.Size = new System.Drawing.Size(191, 26);
+            this.txtEmpNo.TabIndex = 280;
             // 
             // label1
             // 
@@ -968,20 +871,107 @@
             this.txtAuxiliar.TabIndex = 269;
             this.txtAuxiliar.TextOffsetX = 4;
             // 
+            // btnListar
+            // 
+            this.btnListar.AllowDrop = true;
+            this.btnListar.AnimationHoverSpeed = 0.07F;
+            this.btnListar.AnimationSpeed = 0.03F;
+            this.btnListar.BackColor = System.Drawing.Color.Transparent;
+            this.btnListar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnListar.BorderColor = System.Drawing.Color.Black;
+            this.btnListar.BorderSize = 3;
+            this.btnListar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnListar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
+            this.btnListar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnListar.Location = new System.Drawing.Point(1061, 230);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnListar.OnHoverBorderColor = System.Drawing.Color.Aqua;
+            this.btnListar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnListar.OnHoverImage = null;
+            this.btnListar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnListar.Radius = 5;
+            this.btnListar.Size = new System.Drawing.Size(196, 48);
+            this.btnListar.TabIndex = 306;
+            this.btnListar.Text = "Lista Ascendente";
+            this.btnListar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AllowDrop = true;
+            this.btnSalir.AnimationHoverSpeed = 0.07F;
+            this.btnSalir.AnimationSpeed = 0.03F;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnSalir.BorderColor = System.Drawing.Color.Black;
+            this.btnSalir.BorderSize = 3;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSalir.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSalir.Location = new System.Drawing.Point(852, 230);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnSalir.OnHoverBorderColor = System.Drawing.Color.Aqua;
+            this.btnSalir.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSalir.OnHoverImage = null;
+            this.btnSalir.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSalir.Radius = 5;
+            this.btnSalir.Size = new System.Drawing.Size(196, 48);
+            this.btnSalir.TabIndex = 305;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // txtProcedencia
+            // 
+            this.txtProcedencia.BackColor = System.Drawing.Color.Transparent;
+            this.txtProcedencia.BaseColor = System.Drawing.Color.White;
+            this.txtProcedencia.BorderColor = System.Drawing.Color.Silver;
+            this.txtProcedencia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProcedencia.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtProcedencia.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtProcedencia.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtProcedencia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtProcedencia.Location = new System.Drawing.Point(440, 292);
+            this.txtProcedencia.Name = "txtProcedencia";
+            this.txtProcedencia.PasswordChar = '\0';
+            this.txtProcedencia.Radius = 5;
+            this.txtProcedencia.Size = new System.Drawing.Size(191, 38);
+            this.txtProcedencia.TabIndex = 307;
+            this.txtProcedencia.TextOffsetX = 4;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(296, 41);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 308;
+            // 
             // FromInventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 585);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.txtProcedencia);
+            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtBuscaroficinas);
-            this.Controls.Add(this.dtginventario);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.txtEspecifica);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPartida);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pbGuardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.limpiar);
             this.Controls.Add(this.buscar);
@@ -991,11 +981,11 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEmpNo);
+            this.Controls.Add(this.txtbus);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.dtpFechadeIngreso);
-            this.Controls.Add(this.gcbProcedencia);
+            this.Controls.Add(this.txtEmpNo);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label2);
@@ -1017,9 +1007,9 @@
             this.Name = "FromInventarios";
             this.Text = "FromInventarios";
             ((System.ComponentModel.ISupportInitialize)(this.pbWord)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtginventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
@@ -1045,20 +1035,7 @@
 
         private System.Windows.Forms.TextBox txtBuscaroficinas;
         private Guna.UI.WinForms.GunaPictureBox pbWord;
-        private System.Windows.Forms.DataGridView dtginventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridView dgv;
         private Guna.UI.WinForms.GunaTextBox txtEspecifica;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPartida;
@@ -1066,7 +1043,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pbGuardar;
         internal System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox limpiar;
@@ -1077,11 +1054,11 @@
         private Guna.UI.WinForms.GunaButton btnNuevo;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEmpNo;
+        private System.Windows.Forms.TextBox txtbus;
         private System.Windows.Forms.Label label13;
         private Guna.UI.WinForms.GunaTextBox txtEstado;
         internal System.Windows.Forms.DateTimePicker dtpFechadeIngreso;
-        private Guna.UI.WinForms.GunaComboBox gcbProcedencia;
+        private Guna.UI.WinForms.GunaComboBox txtEmpNo;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private System.Windows.Forms.Label fecha;
         private System.Windows.Forms.Label hora;
@@ -1110,5 +1087,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaTextBox txtAuxiliar;
         private System.Windows.Forms.Timer horayfecha;
+        private Guna.UI.WinForms.GunaButton btnListar;
+        private Guna.UI.WinForms.GunaButton btnSalir;
+        private Guna.UI.WinForms.GunaTextBox txtProcedencia;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

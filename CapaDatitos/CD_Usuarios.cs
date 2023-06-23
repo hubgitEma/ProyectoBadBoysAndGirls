@@ -103,7 +103,7 @@ namespace CapaDatitos
             conn.CerrarConexion();
             return tabla;
         }*/
-
+        /*
         public void Insertar(string USUARIO_NO,string CI,string NOMBRE,string PATERNO,string MATERNO,string CARGO,string PROFESION,string USUARIO,string PASSWORD)
         {
             comando.Connection = conn.AbrirConexion();
@@ -111,8 +111,8 @@ namespace CapaDatitos
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
-
-        public void InsertarP(string USUARIO_NO, string CI, string NOMBRE, string PATERNO, string MATERNO, string CARGO, string PROFESION, string USUARIO, string PASSWORD)
+        */
+        public void InsertarP(string CI, string NOMBRE, string PATERNO, string MATERNO, string CARGO, string PROFESION, string USUARIO, string PASSWORD)
         {
             // PARA EL PROCEDIMIENTO
             comando.Connection = conn.AbrirConexion();
@@ -135,7 +135,7 @@ namespace CapaDatitos
         public void EditarP(string CI, string NOMBRE, string PATERNO, string MATERNO, string CARGO, string PROFESION, string USUARIO, string PASSWORD, string USUARIO_NO) {
             // PARA EL PROCEDIMIENTO
             comando.Connection = conn.AbrirConexion();
-            comando.CommandText = " UPDATE_USUARIO";
+            comando.CommandText = "UPDATE_USUARIO";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@ci", CI);
             comando.Parameters.AddWithValue("@nom", NOMBRE);

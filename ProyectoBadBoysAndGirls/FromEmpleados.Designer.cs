@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FromEmpleados));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.pbGuardar = new Guna.UI.WinForms.GunaTransfarantPictureBox();
             this.CbOficina = new Guna.UI.WinForms.GunaComboBox();
             this.CbUsuario = new Guna.UI.WinForms.GunaComboBox();
             this.txtUnidad = new Guna.UI.WinForms.GunaTextBox();
@@ -43,7 +44,6 @@
             this.txtCi = new Guna.UI.WinForms.GunaTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.pbWord = new Guna.UI.WinForms.GunaPictureBox();
@@ -65,13 +65,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.btnLimpiar = new Guna.UI.WinForms.GunaButton();
+            this.btnNuevo = new Guna.UI.WinForms.GunaButton();
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.btnEditar = new Guna.UI.WinForms.GunaButton();
             this.btnGuardar = new Guna.UI.WinForms.GunaButton();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.pbGuardar = new Guna.UI.WinForms.GunaTransfarantPictureBox();
+            this.btnListar = new Guna.UI.WinForms.GunaButton();
+            this.btnSalir = new Guna.UI.WinForms.GunaButton();
             this.GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).BeginInit();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
@@ -84,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
@@ -97,6 +98,18 @@
             this.GroupBox1.TabIndex = 203;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "QR";
+            // 
+            // pbGuardar
+            // 
+            this.pbGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.pbGuardar.BaseColor = System.Drawing.Color.Black;
+            this.pbGuardar.Location = new System.Drawing.Point(21, 25);
+            this.pbGuardar.Name = "pbGuardar";
+            this.pbGuardar.Size = new System.Drawing.Size(142, 105);
+            this.pbGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGuardar.TabIndex = 183;
+            this.pbGuardar.TabStop = false;
+            this.pbGuardar.Click += new System.EventHandler(this.gunaTransfarantPictureBox1_Click);
             // 
             // CbOficina
             // 
@@ -152,6 +165,8 @@
             this.txtUnidad.Size = new System.Drawing.Size(160, 36);
             this.txtUnidad.TabIndex = 179;
             this.txtUnidad.TextOffsetX = 4;
+            this.txtUnidad.TextChanged += new System.EventHandler(this.txtUnidad_TextChanged);
+            this.txtUnidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnidad_KeyPress);
             // 
             // txtId
             // 
@@ -231,6 +246,7 @@
             this.txtCelular.Size = new System.Drawing.Size(160, 36);
             this.txtCelular.TabIndex = 177;
             this.txtCelular.TextOffsetX = 4;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // txtCi
             // 
@@ -249,6 +265,8 @@
             this.txtCi.Size = new System.Drawing.Size(104, 36);
             this.txtCi.TabIndex = 176;
             this.txtCi.TextOffsetX = 4;
+            this.txtCi.TextChanged += new System.EventHandler(this.txtCi_TextChanged);
+            this.txtCi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCi_KeyPress);
             // 
             // label2
             // 
@@ -276,19 +294,6 @@
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label9.UseMnemonic = false;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Maiandra GD", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(19, 370);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(140, 22);
-            this.label11.TabIndex = 175;
-            this.label11.Text = "Departamento";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.UseMnemonic = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -307,10 +312,11 @@
             this.gunaPanel3.Controls.Add(this.pbWord);
             this.gunaPanel3.Controls.Add(this.pbPdf);
             this.gunaPanel3.Controls.Add(this.pbExcel);
-            this.gunaPanel3.Location = new System.Drawing.Point(475, 395);
+            this.gunaPanel3.Location = new System.Drawing.Point(483, 487);
             this.gunaPanel3.Name = "gunaPanel3";
             this.gunaPanel3.Size = new System.Drawing.Size(194, 70);
             this.gunaPanel3.TabIndex = 200;
+            this.gunaPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaPanel3_Paint);
             // 
             // pbWord
             // 
@@ -361,7 +367,6 @@
             this.gunaPanel1.Controls.Add(this.txtCi);
             this.gunaPanel1.Controls.Add(this.label2);
             this.gunaPanel1.Controls.Add(this.label9);
-            this.gunaPanel1.Controls.Add(this.label11);
             this.gunaPanel1.Controls.Add(this.label12);
             this.gunaPanel1.Controls.Add(this.pictureBox4);
             this.gunaPanel1.Controls.Add(this.label1);
@@ -449,6 +454,8 @@
             this.txtAreadeTrabajo.Size = new System.Drawing.Size(160, 36);
             this.txtAreadeTrabajo.TabIndex = 55;
             this.txtAreadeTrabajo.TextOffsetX = 4;
+            this.txtAreadeTrabajo.TextChanged += new System.EventHandler(this.txtAreadeTrabajo_TextChanged);
+            this.txtAreadeTrabajo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAreadeTrabajo_KeyPress);
             // 
             // label8
             // 
@@ -493,6 +500,8 @@
             this.txtCargo.Size = new System.Drawing.Size(160, 36);
             this.txtCargo.TabIndex = 47;
             this.txtCargo.TextOffsetX = 4;
+            this.txtCargo.TextChanged += new System.EventHandler(this.txtCargo_TextChanged);
+            this.txtCargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargo_KeyPress);
             // 
             // txtProfesion
             // 
@@ -511,6 +520,8 @@
             this.txtProfesion.Size = new System.Drawing.Size(160, 36);
             this.txtProfesion.TabIndex = 46;
             this.txtProfesion.TextOffsetX = 4;
+            this.txtProfesion.TextChanged += new System.EventHandler(this.txtProfesion_TextChanged);
+            this.txtProfesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProfesion_KeyPress);
             // 
             // txtNombre
             // 
@@ -529,6 +540,7 @@
             this.txtNombre.Size = new System.Drawing.Size(160, 36);
             this.txtNombre.TabIndex = 45;
             this.txtNombre.TextOffsetX = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged_1);
             // 
             // label5
             // 
@@ -587,32 +599,33 @@
             this.gunaElipse1.Radius = 10;
             this.gunaElipse1.TargetControl = this;
             // 
-            // btnLimpiar
+            // btnNuevo
             // 
-            this.btnLimpiar.AnimationHoverSpeed = 0.07F;
-            this.btnLimpiar.AnimationSpeed = 0.03F;
-            this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
-            this.btnLimpiar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
-            this.btnLimpiar.BorderColor = System.Drawing.Color.Black;
-            this.btnLimpiar.BorderSize = 3;
-            this.btnLimpiar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLimpiar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
-            this.btnLimpiar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLimpiar.Location = new System.Drawing.Point(475, 293);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnLimpiar.OnHoverBorderColor = System.Drawing.Color.Brown;
-            this.btnLimpiar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.OnHoverImage = null;
-            this.btnLimpiar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLimpiar.Radius = 5;
-            this.btnLimpiar.Size = new System.Drawing.Size(195, 42);
-            this.btnLimpiar.TabIndex = 198;
-            this.btnLimpiar.Text = "Nuevo";
-            this.btnLimpiar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNuevo.AnimationHoverSpeed = 0.07F;
+            this.btnNuevo.AnimationSpeed = 0.03F;
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnNuevo.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevo.BorderSize = 3;
+            this.btnNuevo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNuevo.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNuevo.Location = new System.Drawing.Point(475, 293);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnNuevo.OnHoverBorderColor = System.Drawing.Color.Brown;
+            this.btnNuevo.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNuevo.OnHoverImage = null;
+            this.btnNuevo.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNuevo.Radius = 5;
+            this.btnNuevo.Size = new System.Drawing.Size(195, 42);
+            this.btnNuevo.TabIndex = 198;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNuevo.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -708,25 +721,71 @@
             this.dgv.TabIndex = 204;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Listar);
             // 
-            // pbGuardar
+            // btnListar
             // 
-            this.pbGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.pbGuardar.BaseColor = System.Drawing.Color.Black;
-            this.pbGuardar.Location = new System.Drawing.Point(21, 25);
-            this.pbGuardar.Name = "pbGuardar";
-            this.pbGuardar.Size = new System.Drawing.Size(142, 105);
-            this.pbGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbGuardar.TabIndex = 183;
-            this.pbGuardar.TabStop = false;
-            this.pbGuardar.Click += new System.EventHandler(this.gunaTransfarantPictureBox1_Click);
+            this.btnListar.AnimationHoverSpeed = 0.07F;
+            this.btnListar.AnimationSpeed = 0.03F;
+            this.btnListar.BackColor = System.Drawing.Color.Transparent;
+            this.btnListar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnListar.BorderColor = System.Drawing.Color.Black;
+            this.btnListar.BorderSize = 3;
+            this.btnListar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnListar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
+            this.btnListar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnListar.Location = new System.Drawing.Point(474, 395);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnListar.OnHoverBorderColor = System.Drawing.Color.Brown;
+            this.btnListar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnListar.OnHoverImage = null;
+            this.btnListar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnListar.Radius = 5;
+            this.btnListar.Size = new System.Drawing.Size(195, 48);
+            this.btnListar.TabIndex = 205;
+            this.btnListar.Text = "Listar Ascendente";
+            this.btnListar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AnimationHoverSpeed = 0.07F;
+            this.btnSalir.AnimationSpeed = 0.03F;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(56)))), ((int)(((byte)(95)))));
+            this.btnSalir.BorderColor = System.Drawing.Color.Black;
+            this.btnSalir.BorderSize = 3;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSalir.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSalir.Location = new System.Drawing.Point(474, 443);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSalir.OnHoverBorderColor = System.Drawing.Color.Brown;
+            this.btnSalir.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSalir.OnHoverImage = null;
+            this.btnSalir.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSalir.Radius = 5;
+            this.btnSalir.Size = new System.Drawing.Size(195, 48);
+            this.btnSalir.TabIndex = 206;
+            this.btnSalir.Text = "Eliminar";
+            this.btnSalir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FromEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1248, 543);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgv);
-            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.btnEliminar);
@@ -739,6 +798,7 @@
             this.Text = "FromEmpleados";
             this.Load += new System.EventHandler(this.FromEmpleados_Load);
             this.GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
@@ -752,14 +812,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGuardar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI.WinForms.GunaButton btnLimpiar;
+        private Guna.UI.WinForms.GunaButton btnNuevo;
         internal System.Windows.Forms.GroupBox GroupBox1;
         private Guna.UI.WinForms.GunaPictureBox pbExcel;
         private Guna.UI.WinForms.GunaComboBox CbOficina;
@@ -774,7 +833,6 @@
         private Guna.UI.WinForms.GunaTextBox txtCi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
         internal System.Windows.Forms.PictureBox PictureBox11;
@@ -800,5 +858,7 @@
         private Guna.UI.WinForms.GunaComboBox CbExp;
         private System.Windows.Forms.DataGridView dgv;
         private Guna.UI.WinForms.GunaTransfarantPictureBox pbGuardar;
+        private Guna.UI.WinForms.GunaButton btnSalir;
+        private Guna.UI.WinForms.GunaButton btnListar;
     }
 }

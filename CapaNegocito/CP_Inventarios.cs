@@ -8,7 +8,7 @@ using System.Data;
 using CapaDatitos;
 namespace CapaNegocito
 {
-    class CP_Inventarios
+    public class CP_Inventarios
     {
         private CD_Inventarios OCD = new CD_Inventarios();
         // tableUSUS 2

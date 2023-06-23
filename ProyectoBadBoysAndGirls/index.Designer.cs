@@ -39,17 +39,20 @@
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.PictureBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAceptar = new Guna.UI.WinForms.GunaButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pnlogin = new Guna.UI.WinForms.GunaPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            this.gunaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -57,7 +60,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(24, 104);
+            this.label5.Location = new System.Drawing.Point(63, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 22);
             this.label5.TabIndex = 32;
@@ -75,7 +78,7 @@
             this.txtContraseña.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtContraseña.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtContraseña.Location = new System.Drawing.Point(61, 212);
+            this.txtContraseña.Location = new System.Drawing.Point(84, 274);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '\0';
             this.txtContraseña.Radius = 5;
@@ -93,7 +96,7 @@
             this.txtUsuario.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtUsuario.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsuario.Location = new System.Drawing.Point(61, 141);
+            this.txtUsuario.Location = new System.Drawing.Point(84, 195);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.Radius = 5;
@@ -105,8 +108,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(24, 187);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(80, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 22);
             this.label6.TabIndex = 50;
@@ -166,30 +169,6 @@
             this.gunaElipse1.Radius = 10;
             this.gunaElipse1.TargetControl = this;
             // 
-            // gunaPanel1
-            // 
-            this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(56)))), ((int)(((byte)(76)))));
-            this.gunaPanel1.Controls.Add(this.pictureBox5);
-            this.gunaPanel1.Controls.Add(this.label5);
-            this.gunaPanel1.Controls.Add(this.txtContraseña);
-            this.gunaPanel1.Controls.Add(this.txtUsuario);
-            this.gunaPanel1.Controls.Add(this.label6);
-            this.gunaPanel1.Controls.Add(this.btnAceptar);
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 39);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(274, 339);
-            this.gunaPanel1.TabIndex = 64;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(104, 20);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(83, 81);
-            this.pictureBox5.TabIndex = 60;
-            this.pictureBox5.TabStop = false;
-            // 
             // btnAceptar
             // 
             this.btnAceptar.AnimationHoverSpeed = 0.07F;
@@ -204,7 +183,7 @@
             this.btnAceptar.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.btnAceptar.Image = global::ProyectoBadBoysAndGirls.Properties.Resources.outline_done_black_24;
             this.btnAceptar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAceptar.Location = new System.Drawing.Point(61, 274);
+            this.btnAceptar.Location = new System.Drawing.Point(84, 323);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnAceptar.OnHoverBorderColor = System.Drawing.Color.Brown;
@@ -221,20 +200,93 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::ProyectoBadBoysAndGirls.Properties.Resources.carita1;
-            this.pictureBox4.Location = new System.Drawing.Point(273, 42);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 42);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(243, 336);
+            this.pictureBox4.Size = new System.Drawing.Size(513, 336);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 66;
             this.pictureBox4.TabStop = false;
+            // 
+            // pnlogin
+            // 
+            this.pnlogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlogin.BackColor = System.Drawing.Color.White;
+            this.pnlogin.Controls.Add(this.label1);
+            this.pnlogin.Controls.Add(this.pictureBox5);
+            this.pnlogin.Controls.Add(this.label6);
+            this.pnlogin.Controls.Add(this.btnAceptar);
+            this.pnlogin.Controls.Add(this.label5);
+            this.pnlogin.Controls.Add(this.label2);
+            this.pnlogin.Controls.Add(this.label3);
+            this.pnlogin.Controls.Add(this.txtUsuario);
+            this.pnlogin.Controls.Add(this.txtContraseña);
+            this.pnlogin.Location = new System.Drawing.Point(91, 0);
+            this.pnlogin.Name = "pnlogin";
+            this.pnlogin.Size = new System.Drawing.Size(332, 377);
+            this.pnlogin.TabIndex = 67;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mistral", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(131, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 29);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Usuario";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.UseMnemonic = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(129, 67);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(83, 81);
+            this.pictureBox5.TabIndex = 60;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(80, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 22);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Usuario";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseMnemonic = false;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(49, 234);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 22);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Contraseña";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.UseMnemonic = false;
             // 
             // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 378);
+            this.Controls.Add(this.pnlogin);
             this.Controls.Add(this.gunaPanel2);
-            this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "index";
@@ -245,10 +297,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            this.gunaPanel1.ResumeLayout(false);
-            this.gunaPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlogin.ResumeLayout(false);
+            this.pnlogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,10 +316,13 @@
         private System.Windows.Forms.PictureBox minimizar;
         private System.Windows.Forms.PictureBox exit;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        internal System.Windows.Forms.PictureBox pictureBox5;
         private Guna.UI.WinForms.GunaButton btnAceptar;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI.WinForms.GunaPanel pnlogin;
+        private System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

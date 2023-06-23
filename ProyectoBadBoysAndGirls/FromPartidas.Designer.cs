@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtBuscaroficinas = new System.Windows.Forms.TextBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.pbExcel = new Guna.UI.WinForms.GunaPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pbWord = new Guna.UI.WinForms.GunaPictureBox();
@@ -60,13 +60,13 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.GunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.PictureBox();
             this.PictureBox11 = new System.Windows.Forms.PictureBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.txtcoheficiente = new System.Windows.Forms.Panel();
+            this.CbUsu = new Guna.UI.WinForms.GunaComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cht2 = new Guna.UI.WinForms.GunaRadioButton();
             this.chf2 = new Guna.UI.WinForms.GunaRadioButton();
@@ -75,7 +75,7 @@
             this.txtId = new Guna.UI.WinForms.GunaTextBox();
             this.btnListar = new Guna.UI.WinForms.GunaButton();
             this.btnSalir = new Guna.UI.WinForms.GunaButton();
-            this.CbUsu = new Guna.UI.WinForms.GunaComboBox();
+            this.GunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPdf)).BeginInit();
@@ -94,16 +94,17 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtBuscaroficinas
+            // txtBusca
             // 
-            this.txtBuscaroficinas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtBusca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscaroficinas.Location = new System.Drawing.Point(505, 77);
-            this.txtBuscaroficinas.Multiline = true;
-            this.txtBuscaroficinas.Name = "txtBuscaroficinas";
-            this.txtBuscaroficinas.Size = new System.Drawing.Size(194, 36);
-            this.txtBuscaroficinas.TabIndex = 221;
+            this.txtBusca.Location = new System.Drawing.Point(553, 77);
+            this.txtBusca.Multiline = true;
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(158, 36);
+            this.txtBusca.TabIndex = 221;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBuscaroficinas_TextChanged);
             // 
             // pbExcel
             // 
@@ -511,6 +512,8 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 220;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
             // 
             // label5
             // 
@@ -569,11 +572,6 @@
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(436, 231);
             this.dgv.TabIndex = 217;
-            // 
-            // GunaElipse1
-            // 
-            this.GunaElipse1.Radius = 10;
-            this.GunaElipse1.TargetControl = this;
             // 
             // label4
             // 
@@ -669,6 +667,25 @@
             this.txtcoheficiente.Name = "txtcoheficiente";
             this.txtcoheficiente.Size = new System.Drawing.Size(464, 508);
             this.txtcoheficiente.TabIndex = 223;
+            // 
+            // CbUsu
+            // 
+            this.CbUsu.BackColor = System.Drawing.Color.Transparent;
+            this.CbUsu.BaseColor = System.Drawing.Color.White;
+            this.CbUsu.BorderColor = System.Drawing.Color.Silver;
+            this.CbUsu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbUsu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CbUsu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.CbUsu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbUsu.ForeColor = System.Drawing.Color.BlueViolet;
+            this.CbUsu.FormattingEnabled = true;
+            this.CbUsu.Location = new System.Drawing.Point(193, 458);
+            this.CbUsu.Name = "CbUsu";
+            this.CbUsu.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.CbUsu.OnHoverItemForeColor = System.Drawing.Color.Black;
+            this.CbUsu.Size = new System.Drawing.Size(250, 26);
+            this.CbUsu.TabIndex = 203;
             // 
             // panel1
             // 
@@ -816,23 +833,10 @@
             this.btnSalir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // CbUsu
+            // GunaElipse1
             // 
-            this.CbUsu.BackColor = System.Drawing.Color.Transparent;
-            this.CbUsu.BaseColor = System.Drawing.Color.White;
-            this.CbUsu.BorderColor = System.Drawing.Color.Silver;
-            this.CbUsu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CbUsu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbUsu.FocusedColor = System.Drawing.Color.Empty;
-            this.CbUsu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CbUsu.ForeColor = System.Drawing.Color.Black;
-            this.CbUsu.FormattingEnabled = true;
-            this.CbUsu.Location = new System.Drawing.Point(193, 458);
-            this.CbUsu.Name = "CbUsu";
-            this.CbUsu.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.CbUsu.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.CbUsu.Size = new System.Drawing.Size(250, 26);
-            this.CbUsu.TabIndex = 203;
+            this.GunaElipse1.Radius = 10;
+            this.GunaElipse1.TargetControl = this;
             // 
             // FromPartidas
             // 
@@ -841,7 +845,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(926, 549);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.txtBuscaroficinas);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gunaPanel3);
@@ -878,7 +882,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtBuscaroficinas;
+        private System.Windows.Forms.TextBox txtBusca;
         private Guna.UI.WinForms.GunaPictureBox pbExcel;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaPictureBox pbWord;
@@ -905,7 +909,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv;
-        internal Guna.UI.WinForms.GunaElipse GunaElipse1;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private System.Windows.Forms.PictureBox exit;
         internal System.Windows.Forms.PictureBox PictureBox11;
@@ -921,5 +924,6 @@
         private Guna.UI.WinForms.GunaRadioButton cht1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaComboBox CbUsu;
+        internal Guna.UI.WinForms.GunaElipse GunaElipse1;
     }
 }
