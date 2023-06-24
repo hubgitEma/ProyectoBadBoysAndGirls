@@ -10,17 +10,16 @@ using System.Windows.Forms;
 using CapaNegocito;
 using ZXing;
 
-
 namespace ProyectoBadBoysAndGirls
 {
-    public partial class FromInventarios : Form
+    public partial class FromAsignacion : Form
     {
         CP_Inventarios OCPG = new CP_Inventarios();
         // creo q es para editar
         private string id = null;
         //para el metodo de adicion
         private bool Editar = false;
-        public FromInventarios()
+        public FromAsignacion()
         {
             InitializeComponent();
             MostrarGral();
@@ -33,20 +32,12 @@ namespace ProyectoBadBoysAndGirls
         {
             // tableUSUS 3
             CP_Inventarios OCPG = new CP_Inventarios();
-            dgv.DataSource = OCPG.MostrarAscendente();
+            dgv.DataSource = OCPG.Mostrar();
         }
 
-        void usuario()
-        {
-            CP_Usuarios cbusu = new CP_Usuarios();
-            foreach (var item in cbusu.CbUsuario())
-            {
-               // CbUsu.Items.Add(item);
-            }
-        }
         public void GeneraQR()
         {
-            string txt = "";
+            string txt = txtPartida.Text;
             if (txt != "")
             {
                 BarcodeWriter br = new BarcodeWriter();
@@ -68,7 +59,7 @@ namespace ProyectoBadBoysAndGirls
         void BloqueoTextBox(bool sw)
         {
             txtAuxiliar.Enabled = sw;
-            cbPartida.Enabled = sw;
+            txtPartida.Enabled = sw;
             txtCodigoEntidad.Enabled = sw;
             txtCodigoAntiguo.Enabled = sw;
             txtSerie.Enabled = sw;
@@ -84,7 +75,7 @@ namespace ProyectoBadBoysAndGirls
         void limpia()
         {
             txtAuxiliar.Text = "";
-            cbPartida.Items.Clear();
+            txtPartida.Text = "";
             txtCodigoEntidad.Text = "";
             txtCodigoAntiguo.Text = "";
             txtSerie.Text = "";
@@ -95,31 +86,20 @@ namespace ProyectoBadBoysAndGirls
             txtProcedencia.Text = "";
             dtpFechadeIngreso.Text = "";
             txtObservacion.Text = "";
-            txtEmpNo.Text = "";
+            txtEmpNo.Items.Clear();
         }
 
-        void comboBox()
+        private void FromAsignacion_Load(object sender, EventArgs e)
         {
-            CP_Partida cbusu = new CP_Partida();
-            foreach (var item in cbusu.CbpARTIDA())
-            {
-                cbPartida.Items.Add(item);
-            }
-            /*CP_Empleados cbo = new CP_Empleados();
-            for (int i = 0; i < cbo.CbEmpleados().Count; i++)
-            {
-                txtEmpNo.Items.Add(cbo.CbEmpleados()[i]);
-            }*/
+
         }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dtpFechadeIngreso.Value+"");
-            MessageBox.Show(OCPG.RecuperaFecha(txtId.Text)+"");
+
             Editar = false;
             BloqueoTextBox(true);
             limpia();
-            comboBox();
-            usuario();
             BloqueBotones(false, true, false, false);
             btnSalir.Text = "Cancelar";
             pbGuardar.Image = System.Drawing.Image.FromFile("D:\\UPEA\\8-1-2023\\soft\\PROYECTO_GRUPAL\\C#\\ProyectoBadBoysAndGirls\\ProyectoBadBoysAndGirls\\Resources\\carita1.jpeg");
@@ -127,8 +107,8 @@ namespace ProyectoBadBoysAndGirls
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //string usu = Convert.ToString(txtEmpNo.SelectedItem);
-            //usu = usu.Substring(0, usu.IndexOf('|'));            
+            string usu = Convert.ToString(txtEmpNo.SelectedItem);
+            usu = usu.Substring(0, usu.IndexOf('|'));
             if (Editar == false)
             {
                 try
@@ -149,7 +129,7 @@ namespace ProyectoBadBoysAndGirls
             {
                 try
                 {
-                   // OCPG.Editar(txtAuxiliar.Text, txtPartida.Text, txtCodigoEntidad.Text, txtCodigoAntiguo.Text, txtSerie.Text, txtDescripcion.Text, txtEstado.Text, txtEspecifica.Text, usu, txtProcedencia.Text, dtpFechadeIngreso.Text, txtObservacion.Text, txtId.Text);
+                    // OCPG.Editar(txtAuxiliar.Text, txtPartida.Text, txtCodigoEntidad.Text, txtCodigoAntiguo.Text, txtSerie.Text, txtDescripcion.Text, txtEstado.Text, txtEspecifica.Text, usu, txtProcedencia.Text, dtpFechadeIngreso.Text, txtObservacion.Text, txtId.Text);
                     MessageBox.Show("Se modifico correctamente ", "Bad Boys And Girls", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarGral();
                     limpia();
@@ -166,23 +146,24 @@ namespace ProyectoBadBoysAndGirls
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            usuario();
             if (dgv.SelectedRows.Count > 0)
             {
                 Editar = true;
                 // para recuperar en el combo box              
                 txtAuxiliar.Text = dgv.CurrentRow.Cells["AUXILIAR"].Value.ToString();
-                //txtPartida.Text = dgv.CurrentRow.Cells["PARTIDA"].Value.ToString();
+                txtPartida.Text = dgv.CurrentRow.Cells["PARTIDA"].Value.ToString();
                 txtCodigoEntidad.Text = dgv.CurrentRow.Cells["COD_ENTIDAD"].Value.ToString();
                 txtCodigoAntiguo.Text = dgv.CurrentRow.Cells["COD_ANTIGUO"].Value.ToString();
                 txtSerie.Text = dgv.CurrentRow.Cells["SERIE"].Value.ToString();
                 txtDescripcion.Text = dgv.CurrentRow.Cells["DESCRIPCION"].Value.ToString();
                 txtEstado.Text = dgv.CurrentRow.Cells["ESTADO"].Value.ToString();
-                txtEspecifica.Text = dgv.CurrentRow.Cells["ESPECIFICA"].Value.ToString();                
+                txtEspecifica.Text = dgv.CurrentRow.Cells["ESPECIFICA"].Value.ToString();
                 txtProcedencia.Text = dgv.CurrentRow.Cells["PROCEDENCIA"].Value.ToString();
                 dtpFechadeIngreso.Text = dgv.CurrentRow.Cells["FECHA_INGRESO"].Value.ToString();
-                txtObservacion.Text = dgv.CurrentRow.Cells["OBSERVACION"].Value.ToString();                                
-                txtEmpNo.Text= dgv.CurrentRow.Cells["EMP_NO"].Value.ToString();
+                txtObservacion.Text = dgv.CurrentRow.Cells["OBSERVACION"].Value.ToString();
+                string ida = dgv.CurrentRow.Cells["EMP_NO"].Value.ToString();
+                CP_Empleados cbusu = new CP_Empleados();
+                //txtEmpNo.SelectedItem = cbusu.RUF(ida);
                 txtId.Text = dgv.CurrentRow.Cells["INV_NO"].Value.ToString();
             }
             else
@@ -222,8 +203,7 @@ namespace ProyectoBadBoysAndGirls
                 BloqueBotones(true, false, true, true);
                 BloqueoTextBox(false);
                 btnSalir.Text = "Salir";
-                limpia();
-                usuario();
+                limpia();         
                 dgv.Enabled = true;
                 pbGuardar.Image = System.Drawing.Image.FromFile("D:\\UPEA\\8-1-2023\\soft\\PROYECTO_GRUPAL\\C#\\ProyectoBadBoysAndGirls\\ProyectoBadBoysAndGirls\\Resources\\carita1.jpeg");
             }
@@ -242,28 +222,6 @@ namespace ProyectoBadBoysAndGirls
                 dgv.DataSource = OCPG.MostrarDescendente();
                 btnListar.Text = "Lista Ascendente";
             }
-        }
-
-        private void FromInventarios_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void limpiar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtbus_TextChanged(object sender, EventArgs e)
-        {
-            string id = txtbus.Text;
-            CP_Empleados cbusu = new CP_Empleados();            
-            dgvEmpleado.DataSource= cbusu.Busqueda("%"+id+"%","");
-        }
-
-        private void REmp(object sender, DataGridViewCellEventArgs e)
-        {
-            txtEmpNo.Text = dgvEmpleado.CurrentRow.Cells["CI"].Value.ToString() +"       "+ dgvEmpleado.CurrentRow.Cells["NOMBRE"].Value.ToString();
         }
     }
 }

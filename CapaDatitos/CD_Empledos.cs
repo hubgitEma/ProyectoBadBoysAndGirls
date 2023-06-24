@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-
+using System.Collections;
 
 namespace CapaDatitos
 {
@@ -48,12 +48,45 @@ namespace CapaDatitos
             conn.CerrarConexion();
             return tabla;
         }
+        public ArrayList MostrarComboBoxPartida()
+        {
+            //transac sql
+            ArrayList cb = new ArrayList();
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM empleados";
+            leer = comando.ExecuteReader();
+            while (leer.Read())
+            {
+                cb.Add(leer["EMP_NO"] + "|  " + leer["CI"] + "-." + leer["NOMBRE"]);
 
-        public DataTable Busqueda(string ci,string nom, string of, string uni, string usu)
+            }
+            conn.CerrarConexion();
+            return cb;
+        }
+
+        public string RecuperaComboBoxPartida(string id)
+        {
+            //transac sql
+            string cb = "";
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM empleados WHERE EMP_NO='" + id + "'";
+            leer = comando.ExecuteReader();
+            if (leer.Read())
+            {
+                cb = leer["EMP_NO"] + "|  " + leer["CI"] + "-." + leer["NOMBRE"];
+
+            }
+            conn.CerrarConexion();
+            return cb;
+        }
+
+
+
+        public DataTable Busqueda(string ci,string nom)
         {
             //transac sql
             comando.Connection = conn.AbrirConexion();
-            comando.CommandText = "SELECT * FROM EMPLEADOS WHERE CI LIKE '"+ci+"' OR NOMBRE LIKE'"+nom+"' OR OFICINA LIKE '"+of+"' OR UNIDAD LIKE'"+uni+"' OR  USUARIO LIKE'"+usu+"'";
+            comando.CommandText = "SELECT * FROM EMPLEADOS WHERE CI LIKE '"+ci+"' OR NOMBRE LIKE'"+nom+"' ";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conn.CerrarConexion();

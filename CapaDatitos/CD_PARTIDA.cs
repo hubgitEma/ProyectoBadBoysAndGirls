@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
 
 namespace CapaDatitos
 {
@@ -25,6 +26,39 @@ namespace CapaDatitos
             conn.CerrarConexion();
             return tabla;
         }
+
+        public ArrayList MostrarComboBoxPartida()
+        {
+            //transac sql
+            ArrayList cb = new ArrayList();
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM PARTIDA";
+            leer = comando.ExecuteReader();
+            while (leer.Read())
+            {
+                cb.Add(leer["PARTIDA_NO"] + "|  " + leer["NOMBRE"] + "-." + leer["PARTIDA"]);
+
+            }
+            conn.CerrarConexion();
+            return cb;
+        }
+
+        public string RecuperaComboBoxPartida(string id)
+        {
+            //transac sql
+            string cb = "";
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM PARTIDA WHERE PARTIDA_NO='" + id + "'";
+            leer = comando.ExecuteReader();
+            if (leer.Read())
+            {
+                cb=leer["PARTIDA_NO"] + "|  " + leer["NOMBRE"] + "-." + leer["PARTIDA"] ;
+
+            }
+            conn.CerrarConexion();
+            return cb;
+        }
+
 
         public DataTable MostrarDesc()
         {

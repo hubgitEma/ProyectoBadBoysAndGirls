@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using CapaDatitos;
+using System.Collections;
 namespace CapaNegocito
 {
     public class CP_Partida
@@ -56,6 +57,18 @@ namespace CapaNegocito
             DataTable tabla = new DataTable();
             tabla = OCD.Busqueda(part, p,  vu, dep,  act);
             return tabla;
+        }
+
+        public ArrayList CbpARTIDA()
+        {
+            ArrayList lis = OCD.MostrarComboBoxPartida();
+            return lis;
+        }
+
+        public string RUF(string id)
+        {
+            string lis = OCD.RecuperaComboBoxPartida(id);
+            return lis;
         }
     }
 }

@@ -20,3 +20,4 @@ D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoys
 D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.FromInventarios.resources
 D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.Menu.resources
 D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.ProgresBar.resources
+D:\UPEA\8-1-2023\soft\PROYECTO_GRUPAL\C#\ProyectoBadBoysAndGirls\ProyectoBadBoysAndGirls\obj\Debug\ProyectoBadBoysAndGirls.FromAsignacion.resources
