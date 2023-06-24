@@ -18,7 +18,7 @@ namespace CapaDatitos
         {
             //transac sql
             comando.Connection = conn.AbrirConexion();
-            comando.CommandText = "SELECT * FROM INVENTARIOS";
+            comando.CommandText = "SELECT TOP(100) * FROM INVENTARIOS ";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conn.CerrarConexion();
@@ -29,7 +29,7 @@ namespace CapaDatitos
         {
             //transac sql
             comando.Connection = conn.AbrirConexion();
-            comando.CommandText = "SELECT * FROM INVENTARIOS ORDER BY CONVERT(INT,SUBSTRING(INV_NO,4,LEN(INV_NO))) DESC";
+            comando.CommandText = "SELECT TOP(100)* FROM INVENTARIOS ORDER BY CONVERT(INT,SUBSTRING(INV_NO,4,LEN(INV_NO))) DESC";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conn.CerrarConexion();
@@ -40,7 +40,7 @@ namespace CapaDatitos
         {
             //transac sql
             comando.Connection = conn.AbrirConexion();
-            comando.CommandText = "SELECT * FROM INVENTARIOS ORDER BY CONVERT(INT,SUBSTRING(INV_NO,4,LEN(INV_NO))) ASC";
+            comando.CommandText = "SELECT TOP(100) * FROM INVENTARIOS ORDER BY CONVERT(INT,SUBSTRING(INV_NO,4,LEN(INV_NO))) ASC";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conn.CerrarConexion();
@@ -51,14 +51,27 @@ namespace CapaDatitos
         {
             //transac sql
             comando.Connection = conn.AbrirConexion();
-            comando.CommandText = "SELECT * FROM INVENTARIOS WHERE PARTIDA LIKE '' OR COD_ENTIDAD LIKE '' OR COD_ANTIGUO LIKE '' OR DESCRIPCION LIKE '%EXTENCION%' OR ESTADO LIKE '' OR ESPECIFICA LIKE '' OR EMP_NO LIKE '' OR FECHA_INGRESO LIKE ''";
+            comando.CommandText = "SELECT TOP(100) * FROM INVENTARIOS WHERE PARTIDA LIKE '' OR COD_ENTIDAD LIKE '' OR COD_ANTIGUO LIKE '' OR DESCRIPCION LIKE '%EXTENCION%' OR ESTADO LIKE '' OR ESPECIFICA LIKE '' OR EMP_NO LIKE '' OR FECHA_INGRESO LIKE ''";
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conn.CerrarConexion();
             return tabla;
         }
 
-
+        public DateTime  RecuperaFecha(string id)
+        {
+            DateTime cb = DateTime.Now;
+            //transac sql            
+            comando.Connection = conn.AbrirConexion();
+            comando.CommandText = "SELECT * FROM INVENTARIOS_EXCEL I WHERE I.INV_NO='"+id+"' ORDER BY CONVERT(INT,SUBSTRING(I.INV_NO,4,LEN(I.INV_NO))) DESC ";
+            leer = comando.ExecuteReader();
+            if (leer.Read())
+            {                
+                     cb = Convert.ToDateTime(leer["FECHA_INGRESO"]);
+            }
+            conn.CerrarConexion();
+            return cb;
+        }
         public void InsertarP(string aux, string part, string ce, string ca, string des, string es, string esp, string emp, string proc, DateTime fe,string obs)
         {
             // PARA EL PROCEDIMIENTO

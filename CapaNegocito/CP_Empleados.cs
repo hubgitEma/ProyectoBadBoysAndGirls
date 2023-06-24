@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using CapaDatitos;
+using System.Collections;
 
 namespace CapaNegocito
 {
@@ -51,11 +52,23 @@ namespace CapaNegocito
             return tabla;
         }
 
-        public DataTable Busqueda(string ci, string nom, string of, string uni, string usu)
+        public DataTable Busqueda(string ci, string nom)
         {
             DataTable tabla = new DataTable();
-            tabla = OCD.Busqueda(ci, nom, of, uni, usu);
+            tabla = OCD.Busqueda(ci, nom);
             return tabla;
-        }    
-}
+        }
+
+        public ArrayList CbEmpleados()
+        {
+            ArrayList lis = OCD.MostrarComboBoxPartida();
+            return lis;
+        }
+
+        public string RUF(string id)
+        {
+            string lis = OCD.RecuperaComboBoxPartida(id);
+            return lis;
+        }
+    }
 }

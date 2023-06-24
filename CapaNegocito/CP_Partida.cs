@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using CapaDatitos;
+using System.Collections;
 namespace CapaNegocito
 {
-    class CP_Partida
+    public class CP_Partida
     {
 
         private CD_PARTIDA OCD = new CD_PARTIDA();
@@ -23,7 +24,7 @@ namespace CapaNegocito
         // DE TIPO STRING TODO POR LO COMBOBOXS
         public void Insertar(string nom, string part, string vu, string cof, string depre, string act, string usu)
         {
-            OCD.InsertarP(nom, Convert.ToInt32(part), Convert.ToDouble(vu), Convert.ToDouble(cof), depre, act,  usu);
+            OCD.InsertarP(nom, Convert.ToInt32(part), float.Parse(vu), float.Parse(cof), depre, act,  usu);
         }
 
         public void Editar(string nom, string part, string vu, string cof, string depre, string act, string usu, string id)
@@ -56,6 +57,18 @@ namespace CapaNegocito
             DataTable tabla = new DataTable();
             tabla = OCD.Busqueda(part, p,  vu, dep,  act);
             return tabla;
+        }
+
+        public ArrayList CbpARTIDA()
+        {
+            ArrayList lis = OCD.MostrarComboBoxPartida();
+            return lis;
+        }
+
+        public string RUF(string id)
+        {
+            string lis = OCD.RecuperaComboBoxPartida(id);
+            return lis;
         }
     }
 }

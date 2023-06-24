@@ -8,7 +8,7 @@ using System.Data;
 using CapaDatitos;
 namespace CapaNegocito
 {
-    class CP_Inventarios
+    public class CP_Inventarios
     {
         private CD_Inventarios OCD = new CD_Inventarios();
         // tableUSUS 2
@@ -55,6 +55,12 @@ namespace CapaNegocito
             DataTable tabla = new DataTable();
             tabla = OCD.Busqueda( part,  codEnt, codAnt, desc, est, espe, emp,Convert.ToDateTime(fech));
             return tabla;
-        }    
+        }
+
+        public DateTime RecuperaFecha(string id) {
+            DateTime cb = DateTime.Now;
+            cb=OCD.RecuperaFecha(id);
+            return cb;
+        }
 }
 }
